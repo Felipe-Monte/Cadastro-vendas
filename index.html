@@ -53,6 +53,7 @@
         function clicar() {
             var senha = document.getElementById('senha')
             var res = document.getElementById('res')
+            var image = document.getElementById('image')
 
             if (senha.value == 0) {
                 alert('Campo em branco!')
@@ -68,6 +69,7 @@
                 alert('Acesso permitido')
                 res.innerHTML = `<p>Olá felipe</p>`
                 res.innerHTML += `<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQeX0eT7feWNccDZfMHZaaXfEuNYi-FhaVGWYo9cVl2uwGnQjIWihFo5kd5Do7k8Q/pubhtml?gid=1797602269&amp;single=true&amp;widget=true&amp;headers=false"></iframe>`
+                image.style.visibility = 'hidden' /*no visibility img*/
             }
 
         }
@@ -86,7 +88,7 @@
             <p>Verifique aqui seu saldo</p>
         </div>
 
-        <img src="imagens/foto-icone-peq-02.jpg" alt="">
+        <img id="image" src="imagens/foto-icone-peq-02.jpg" alt="">
     </section>
     
 </body>
