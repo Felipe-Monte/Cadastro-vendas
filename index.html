@@ -69,6 +69,11 @@
             margin-top: 70px;
         }
 
+        aside {
+            text-align: justify center;
+            padding: 15px;
+        }
+
         footer {
             text-align: center;
             color: aliceblue;
@@ -81,6 +86,7 @@
             var senha = document.getElementById('senha')
             var res = document.getElementById('res')
             var image = document.getElementById('image')
+            var msg = document.getElementById('msg')
 
             if (senha.value == 0) {
                 alert('Campo em branco!')
@@ -97,6 +103,7 @@
                 res.innerHTML = `<p>Olá Felipe</p>`
                 res.innerHTML += `<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQeX0eT7feWNccDZfMHZaaXfEuNYi-FhaVGWYo9cVl2uwGnQjIWihFo5kd5Do7k8Q/pubhtml?gid=1797602269&amp;single=true&amp;widget=true&amp;headers=false"></iframe>`
                 image.style.visibility = 'hidden' /*no visibility img*/
+                msg.style.visibility = 'hidden'
             }
 
         }
@@ -116,8 +123,11 @@
         </div>
 
         <img id="image" src="imagens/foto-icone-peq-02.jpg" alt="Usuario">
+
+        <aside id="msg">
+            <p>Digite seu login e verifique os valores que foram atualizados em nosso sistema</p>
+        </aside>
     </section>
-    
 </body>
 
 <footer>
