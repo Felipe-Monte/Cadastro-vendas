@@ -17,7 +17,7 @@
             background-color: rgb(150, 117, 182);
         }
 
-        section {
+        section#principal {
             background-color: white;
             width: 311px;
             height: 520px;
@@ -51,15 +51,18 @@
 
             if (senha.value == 0) {
                 alert('Campo em branco!')
+                senha.focus()
 
             } else if (senha.value != 'felipe') { 
                 alert('Usuario nao cadastrado!')
+                senha.value = ''
+                senha.focus()
 
             } else if (senha.value === 'felipe'){
 
                 alert('Acesso permitido')
                 res.innerHTML = `<p>Olá felipe</p>`
-                res.innerHTML += `<iframe src="https://felipe-monte.github.io/Tabela-carros/"></iframe>`
+                res.innerHTML += `<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQeX0eT7feWNccDZfMHZaaXfEuNYi-FhaVGWYo9cVl2uwGnQjIWihFo5kd5Do7k8Q/pubhtml?gid=1797602269&amp;single=true&amp;widget=true&amp;headers=false"></iframe>`
             }
 
         }
@@ -70,7 +73,7 @@
 <body>
     <h1>Cadastro</h1>
 
-    <section>
+    <section id="principal">
         <input type="password" name="senha" id="senha" placeholder="Digite aqui seu acesso">
         <input type="button" value="Entrar" onclick="clicar()">
 
